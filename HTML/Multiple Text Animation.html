@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' ,sans-serif ;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #010213;
+    overflow: hidden;
+}
+
+.container{
+    width: 246px;
+    overflow: hidden;
+}
+
+.container .text{
+    position: relative;
+    color: orange;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.container .text.first-text {
+ color: white;
+}
+
+ .text.sec-text:before{
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 100%;
+     width: 100%;
+     background-color: #010213;
+     border-left: 2px solid orange;
+     animation: animate 4s steps(12) infinite;
+ }
+
+ @keyframes animate {
+     40%,60%{
+         left: calc(100% + 4px);
+     }
+     100%{
+         left: 0%;
+     }
+ }
+
+    </style>
+
+
+</head>
+
+<body>
+
+<div class="container">
+    <span class="text first-text">I'm a</span>
+    <span class="text sec-text"></span>
+</div>
+
+<script>
+
+    const text = document.querySelector(".sec-text");
+
+    const textLoad = () => {
+        setTimeout(() => {
+            text.textContent = "Bloger";
+        }, 0);
+        setTimeout(() => {
+            text.textContent = "Youtuber";
+        }, 4000);
+        setTimeout(() => {
+            text.textContent = "Freelancer";
+        }, 8000);
+        setTimeout(() => {
+            text.textContent = "Entreprener";
+        }, 12000);
+        setTimeout(() => {
+            text.textContent = "Vloger";
+        }, 16000);
+       
+
+    }
+
+        textLoad();
+        setInterval(textLoad,24000);
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+
+
+}
+
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+h1{
+    color: white;
+    text-shadow: 1px 1px 4px black;
+}
+
+
+.one{
+    background-color: chartreuse;
+}
+.two{
+    background-color: deeppink;
+}
+.tree{
+    background-color: red;
+}
+.for{
+    background-color: aqua;
+}
+
+/*------------------- Scroll Bar -------------------------*/
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-track{
+    background: #010213;
+}
+::-webkit-scrollbar-thumb{
+    background: gold;
+}
+
+/*==============================================*/
+
+
